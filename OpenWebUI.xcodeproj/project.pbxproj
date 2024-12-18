@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		752788F22D13923E00565E85 /* EditAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752788F12D13923E00565E85 /* EditAddressView.swift */; };
 		759948472D0D0B280030260B /* OpenWebUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759948462D0D0B280030260B /* OpenWebUIApp.swift */; };
 		7599484B2D0D0B290030260B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7599484A2D0D0B290030260B /* Assets.xcassets */; };
 		7599487D2D0D0F570030260B /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759948752D0D0B830030260B /* WebViewContainer.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		752788F12D13923E00565E85 /* EditAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAddressView.swift; sourceTree = "<group>"; };
 		759948432D0D0B280030260B /* OpenWebUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWebUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		759948462D0D0B280030260B /* OpenWebUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWebUIApp.swift; sourceTree = "<group>"; };
 		7599484A2D0D0B290030260B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				759948752D0D0B830030260B /* WebViewContainer.swift */,
 				759948742D0D0B7B0030260B /* ContentView.swift */,
+				752788F12D13923E00565E85 /* EditAddressView.swift */,
 				759948732D0D0B6C0030260B /* AddAddressView.swift */,
 			);
 			path = Views;
@@ -311,6 +314,7 @@
 				7599487E2D0D0F570030260B /* ContentView.swift in Sources */,
 				7599487F2D0D0F570030260B /* AddAddressView.swift in Sources */,
 				759948802D0D0F570030260B /* AddressStorage.swift in Sources */,
+				752788F22D13923E00565E85 /* EditAddressView.swift in Sources */,
 				759948812D0D0F570030260B /* ServiceAddress.swift in Sources */,
 				759948472D0D0B280030260B /* OpenWebUIApp.swift in Sources */,
 			);

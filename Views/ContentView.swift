@@ -96,6 +96,11 @@ struct ContentView: View {
                 .presentationDetents([.medium])
         }
         .onAppear(perform: loadSavedAddresses)
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("DefaultAddressChanged"))) { notification in
+            if let newDefaultAddress = notification.object as? ServiceAddress {
+                self.selectedAddress = newDefaultAddress
+            }
+        }
         .sheet(isPresented: $showingAddSheet) {
             AddAddressView(addresses: $addresses)
         }
@@ -108,9 +113,8 @@ struct ContentView: View {
         
         DispatchQueue.main.async {
             self.addresses = loadedAddresses
-            if self.selectedAddress == nil {
-                self.selectedAddress = loadedAddresses.first(where: { $0.isDefault }) ?? loadedAddresses.first
-            }
+            let defaultAddress = loadedAddresses.first(where: { $0.isDefault })
+            self.selectedAddress = defaultAddress
         }
     }
 }

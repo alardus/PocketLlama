@@ -43,20 +43,31 @@ struct EditAddressView: View {
     }
     
     private func saveAddress() {
-        // Регулярное выражение для проверки формата URL с возможным портом
-//        let urlPattern = "^(http://|https://)?(\\d{1,3}\\.){3}\\d{1,3}(:\\d+)?$"
         let urlPattern = ".*"
         let regex = try! NSRegularExpression(pattern: urlPattern)
         
         let range = NSRange(location: 0, length: url.utf16.count)
         if regex.firstMatch(in: url, options: [], range: range) != nil {
+            if isDefault {
+                for i in 0..<addresses.count {
+                    addresses[i].isDefault = false
+                }
+            }
+            
             if let index = addresses.firstIndex(where: { $0.id == addressToEdit.id }) {
-                addresses[index] = ServiceAddress(id: addressToEdit.id, name: name, url: url, isDefault: isDefault)
+                let updatedAddress = ServiceAddress(id: addressToEdit.id, name: name, url: url, isDefault: isDefault)
+                addresses[index] = updatedAddress
                 AddressStorage.shared.saveAddresses(addresses)
-                dismiss() // Закрыть окно только при успешном сохранении
+                
+                NotificationCenter.default.post(
+                    name: Notification.Name("DefaultAddressChanged"),
+                    object: isDefault ? updatedAddress : nil
+                )
+                
+                dismiss()
             }
         } else {
-            errorMessage = "Ошибка: адрес не соответствует формату URL." // Установить сообщение об ошибке
+            errorMessage = "Ошибка: адрес не соответствует формату URL."
         }
     }
 }

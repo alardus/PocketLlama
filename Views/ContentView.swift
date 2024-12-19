@@ -11,12 +11,22 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                Spacer()
                 if let address = selectedAddress {
                     WebViewContainer(url: address.url)
                         .ignoresSafeArea(edges: .bottom)
                 } else {
-                    Text("Выберите адрес сервиса")
-                        .foregroundColor(.gray)
+                    Text("Выберите или добавьте сервер")
+                        .foregroundColor(.gray);
+                    Button(action: { showingAddSheet = true }) {
+                        Text("Добавить адрес сервера")
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                    .padding() // Общие отступы
+                    .offset(y: 50) // Смещение вниз на 50 точек
                 }
             }
             .navigationTitle("Open WebUI")
@@ -109,31 +119,38 @@ struct ContentView: View {
 struct AboutView: View {
     var body: some View {
         NavigationStack {
-            VStack(spacing: 20) {
+            VStack() {
                 Image(systemName: "network")
                     .font(.system(size: 60))
                     .foregroundColor(.blue)
                 
-                Text("Open WebUI")
+                Text("OpenUI")
                     .font(.title)
                     .bold()
                 
                 Text("Версия 0.0.1")
                     .foregroundColor(.secondary)
-                
-                Text("OpenUI — современное приложение для удобной работы с серверами Ollama на мобильных устройствах")
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-                
-                Link("Проект на GitHub", destination: URL(string: "https://github.com/alardus/openui-swift")!)
-                    .font(.headline)
-                    .foregroundColor(.blue)
-                
+                    .font(.subheadline)
+        
                 Spacer()
             }
             .padding(.top, 40)
             .navigationTitle("О приложении")
             .navigationBarTitleDisplayMode(.inline)
+            
+            VStack(spacing: 20) {
+                Text("Современное приложение для удобной работы с серверами Ollama на мобильных устройствах")
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                
+                Spacer()
+                
+                Link("Проект на GitHub", destination: URL(string: "https://github.com/alardus/openui-swift")!)
+                    .foregroundColor(.blue)
+                
+                Spacer()
+                
+            }
         }
     }
 }

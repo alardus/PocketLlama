@@ -30,7 +30,7 @@ struct AddAddressView: View {
                         .foregroundColor(.red)
                 }
             }
-            .navigationTitle("Добавить сервис")
+            .navigationTitle("Добавить сервер")
             .navigationBarItems(
                 leading: Button("Отмена") { dismiss() },
                 trailing: Button("Сохранить") {
@@ -43,7 +43,8 @@ struct AddAddressView: View {
     
     private func saveAddress() {
         // Регулярное выражение для проверки формата URL с возможным портом
-        let urlPattern = "^(http://|https://)?(\\d{1,3}\\.){3}\\d{1,3}(:\\d+)?$"
+//        let urlPattern = "^(http://|https://)?(\\d{1,3}\\.){3}\\d{1,3}(:\\d+)?$"
+        let urlPattern = ".*"
         let regex = try! NSRegularExpression(pattern: urlPattern)
         
         let range = NSRange(location: 0, length: url.utf16.count)

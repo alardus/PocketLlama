@@ -44,7 +44,8 @@ struct EditAddressView: View {
     
     private func saveAddress() {
         // Регулярное выражение для проверки формата URL с возможным портом
-        let urlPattern = "^(http://|https://)?(\\d{1,3}\\.){3}\\d{1,3}(:\\d+)?$"
+//        let urlPattern = "^(http://|https://)?(\\d{1,3}\\.){3}\\d{1,3}(:\\d+)?$"
+        let urlPattern = ".*"
         let regex = try! NSRegularExpression(pattern: urlPattern)
         
         let range = NSRange(location: 0, length: url.utf16.count)

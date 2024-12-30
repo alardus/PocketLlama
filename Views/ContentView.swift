@@ -16,6 +16,12 @@ struct ContentView: View {
                     WebViewContainer(url: address.url)
                         .ignoresSafeArea(edges: .bottom)
                 } else {
+                    
+                    Image("AppIconAbout")
+                        .resizable()
+                        .frame(width: 128, height: 128)
+                        .offset(y: -100)
+                    
                     Text("Выберите или добавьте сервер")
                         .foregroundColor(.gray);
                     Button(action: { showingAddSheet = true }) {
@@ -29,7 +35,7 @@ struct ContentView: View {
                     .offset(y: 50) // Смещение вниз на 50 точек
                 }
             }
-            .navigationTitle("Open WebUI")
+            .navigationTitle("PocketLlama")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -124,11 +130,11 @@ struct AboutView: View {
     var body: some View {
         NavigationStack {
             VStack() {
-                Image(systemName: "network")
-                    .font(.system(size: 60))
-                    .foregroundColor(.blue)
+                Image("AppIconAbout")
+                    .resizable()
+                    .frame(width: 60, height: 60)
                 
-                Text("OpenUI")
+                Text("PocketLlama")
                     .font(.title)
                     .bold()
                 

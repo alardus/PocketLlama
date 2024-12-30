@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>OpenUI</string>
+	<string>PocketLlama</string>
 	<key>CFBundleExecutable</key>
-	<string>OpenWebUI</string>
+	<string>PocketLlama</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleName</key>
-	<string>OpenUI</string>
+	<string>PocketLlama</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

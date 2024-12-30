@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		752788F22D13923E00565E85 /* EditAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752788F12D13923E00565E85 /* EditAddressView.swift */; };
-		759948472D0D0B280030260B /* OpenWebUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759948462D0D0B280030260B /* OpenWebUIApp.swift */; };
+		759948472D0D0B280030260B /* PocketLlama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759948462D0D0B280030260B /* PocketLlama.swift */; };
 		7599484B2D0D0B290030260B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7599484A2D0D0B290030260B /* Assets.xcassets */; };
 		7599487D2D0D0F570030260B /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759948752D0D0B830030260B /* WebViewContainer.swift */; };
 		7599487E2D0D0F570030260B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759948742D0D0B7B0030260B /* ContentView.swift */; };
@@ -36,11 +36,11 @@
 
 /* Begin PBXFileReference section */
 		752788F12D13923E00565E85 /* EditAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAddressView.swift; sourceTree = "<group>"; };
-		759948432D0D0B280030260B /* OpenWebUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWebUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		759948462D0D0B280030260B /* OpenWebUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWebUIApp.swift; sourceTree = "<group>"; };
+		759948432D0D0B280030260B /* PocketLlama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketLlama.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		759948462D0D0B280030260B /* PocketLlama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketLlama.swift; sourceTree = "<group>"; };
 		7599484A2D0D0B290030260B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		759948532D0D0B290030260B /* OpenWebUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWebUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7599485D2D0D0B290030260B /* OpenWebUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWebUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		759948532D0D0B290030260B /* PocketLlamaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketLlamaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7599485D2D0D0B290030260B /* PocketLlamaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketLlamaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		759948732D0D0B6C0030260B /* AddAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressView.swift; sourceTree = "<group>"; };
 		759948742D0D0B7B0030260B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		759948752D0D0B830030260B /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
@@ -50,35 +50,35 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		75A8E5032D0E3B86007A1595 /* Exceptions for "Preview Content" folder in "OpenWebUI" target */ = {
+		75A8E5032D0E3B86007A1595 /* Exceptions for "Preview Content" folder in "PocketLlama" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Preview Assets.xcassets",
 			);
-			target = 759948422D0D0B280030260B /* OpenWebUI */;
+			target = 759948422D0D0B280030260B /* PocketLlama */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		759948452D0D0B280030260B /* OpenWebUI */ = {
+		759948452D0D0B280030260B /* PocketLlama */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = OpenWebUI;
+			path = PocketLlama;
 			sourceTree = "<group>";
 		};
-		759948562D0D0B290030260B /* OpenWebUITests */ = {
+		759948562D0D0B290030260B /* PocketLlamaTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = OpenWebUITests;
+			path = PocketLlamaTests;
 			sourceTree = "<group>";
 		};
-		759948602D0D0B290030260B /* OpenWebUIUITests */ = {
+		759948602D0D0B290030260B /* PocketLlamaUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = OpenWebUIUITests;
+			path = PocketLlamaUITests;
 			sourceTree = "<group>";
 		};
 		7599487B2D0D0DB80030260B /* Preview Content */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				75A8E5032D0E3B86007A1595 /* Exceptions for "Preview Content" folder in "OpenWebUI" target */,
+				75A8E5032D0E3B86007A1595 /* Exceptions for "Preview Content" folder in "PocketLlama" target */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -116,23 +116,23 @@
 				759948722D0D0B460030260B /* Views */,
 				759948712D0D0B3E0030260B /* Services */,
 				759948702D0D0B2F0030260B /* Models */,
-				759948452D0D0B280030260B /* OpenWebUI */,
-				759948562D0D0B290030260B /* OpenWebUITests */,
-				759948602D0D0B290030260B /* OpenWebUIUITests */,
+				759948452D0D0B280030260B /* PocketLlama */,
+				759948562D0D0B290030260B /* PocketLlamaTests */,
+				759948602D0D0B290030260B /* PocketLlamaUITests */,
 				759948442D0D0B280030260B /* Products */,
 				7599487B2D0D0DB80030260B /* Preview Content */,
 				759948782D0D0C320030260B /* Info.plist */,
 				7599484A2D0D0B290030260B /* Assets.xcassets */,
-				759948462D0D0B280030260B /* OpenWebUIApp.swift */,
+				759948462D0D0B280030260B /* PocketLlama.swift */,
 			);
 			sourceTree = "<group>";
 		};
 		759948442D0D0B280030260B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				759948432D0D0B280030260B /* OpenWebUI.app */,
-				759948532D0D0B290030260B /* OpenWebUITests.xctest */,
-				7599485D2D0D0B290030260B /* OpenWebUIUITests.xctest */,
+				759948432D0D0B280030260B /* PocketLlama.app */,
+				759948532D0D0B290030260B /* PocketLlamaTests.xctest */,
+				7599485D2D0D0B290030260B /* PocketLlamaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,9 +167,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		759948422D0D0B280030260B /* OpenWebUI */ = {
+		759948422D0D0B280030260B /* PocketLlama */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 759948672D0D0B290030260B /* Build configuration list for PBXNativeTarget "OpenWebUI" */;
+			buildConfigurationList = 759948672D0D0B290030260B /* Build configuration list for PBXNativeTarget "PocketLlama" */;
 			buildPhases = (
 				7599483F2D0D0B280030260B /* Sources */,
 				759948402D0D0B280030260B /* Frameworks */,
@@ -180,19 +180,19 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				759948452D0D0B280030260B /* OpenWebUI */,
+				759948452D0D0B280030260B /* PocketLlama */,
 				7599487B2D0D0DB80030260B /* Preview Content */,
 			);
-			name = OpenWebUI;
+			name = PocketLlama;
 			packageProductDependencies = (
 			);
 			productName = OpenWebUI;
-			productReference = 759948432D0D0B280030260B /* OpenWebUI.app */;
+			productReference = 759948432D0D0B280030260B /* PocketLlama.app */;
 			productType = "com.apple.product-type.application";
 		};
-		759948522D0D0B290030260B /* OpenWebUITests */ = {
+		759948522D0D0B290030260B /* PocketLlamaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7599486A2D0D0B290030260B /* Build configuration list for PBXNativeTarget "OpenWebUITests" */;
+			buildConfigurationList = 7599486A2D0D0B290030260B /* Build configuration list for PBXNativeTarget "PocketLlamaTests" */;
 			buildPhases = (
 				7599484F2D0D0B290030260B /* Sources */,
 				759948502D0D0B290030260B /* Frameworks */,
@@ -204,18 +204,18 @@
 				759948552D0D0B290030260B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				759948562D0D0B290030260B /* OpenWebUITests */,
+				759948562D0D0B290030260B /* PocketLlamaTests */,
 			);
-			name = OpenWebUITests;
+			name = PocketLlamaTests;
 			packageProductDependencies = (
 			);
 			productName = OpenWebUITests;
-			productReference = 759948532D0D0B290030260B /* OpenWebUITests.xctest */;
+			productReference = 759948532D0D0B290030260B /* PocketLlamaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7599485C2D0D0B290030260B /* OpenWebUIUITests */ = {
+		7599485C2D0D0B290030260B /* PocketLlamaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7599486D2D0D0B290030260B /* Build configuration list for PBXNativeTarget "OpenWebUIUITests" */;
+			buildConfigurationList = 7599486D2D0D0B290030260B /* Build configuration list for PBXNativeTarget "PocketLlamaUITests" */;
 			buildPhases = (
 				759948592D0D0B290030260B /* Sources */,
 				7599485A2D0D0B290030260B /* Frameworks */,
@@ -227,13 +227,13 @@
 				7599485F2D0D0B290030260B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				759948602D0D0B290030260B /* OpenWebUIUITests */,
+				759948602D0D0B290030260B /* PocketLlamaUITests */,
 			);
-			name = OpenWebUIUITests;
+			name = PocketLlamaUITests;
 			packageProductDependencies = (
 			);
 			productName = OpenWebUIUITests;
-			productReference = 7599485D2D0D0B290030260B /* OpenWebUIUITests.xctest */;
+			productReference = 7599485D2D0D0B290030260B /* PocketLlamaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -259,7 +259,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7599483E2D0D0B280030260B /* Build configuration list for PBXProject "OpenWebUI" */;
+			buildConfigurationList = 7599483E2D0D0B280030260B /* Build configuration list for PBXProject "PocketLlama" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -273,9 +273,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				759948422D0D0B280030260B /* OpenWebUI */,
-				759948522D0D0B290030260B /* OpenWebUITests */,
-				7599485C2D0D0B290030260B /* OpenWebUIUITests */,
+				759948422D0D0B280030260B /* PocketLlama */,
+				759948522D0D0B290030260B /* PocketLlamaTests */,
+				7599485C2D0D0B290030260B /* PocketLlamaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,7 +316,7 @@
 				759948802D0D0F570030260B /* AddressStorage.swift in Sources */,
 				752788F22D13923E00565E85 /* EditAddressView.swift in Sources */,
 				759948812D0D0F570030260B /* ServiceAddress.swift in Sources */,
-				759948472D0D0B280030260B /* OpenWebUIApp.swift in Sources */,
+				759948472D0D0B280030260B /* PocketLlama.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,12 +339,12 @@
 /* Begin PBXTargetDependency section */
 		759948552D0D0B290030260B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 759948422D0D0B280030260B /* OpenWebUI */;
+			target = 759948422D0D0B280030260B /* PocketLlama */;
 			targetProxy = 759948542D0D0B290030260B /* PBXContainerItemProxy */;
 		};
 		7599485F2D0D0B290030260B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 759948422D0D0B280030260B /* OpenWebUI */;
+			target = 759948422D0D0B280030260B /* PocketLlama */;
 			targetProxy = 7599485E2D0D0B290030260B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -481,7 +481,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = OpenUI;
+				INFOPLIST_KEY_CFBundleDisplayName = PocketLlama;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -493,7 +494,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = us.alard.openui;
+				PRODUCT_BUNDLE_IDENTIFIER = alardus.PocketLlama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -513,7 +514,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = OpenUI;
+				INFOPLIST_KEY_CFBundleDisplayName = PocketLlama;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -525,7 +527,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = us.alard.openui;
+				PRODUCT_BUNDLE_IDENTIFIER = alardus.PocketLlama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -547,7 +549,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenWebUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OpenWebUI";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketLlama.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PocketLlama";
 			};
 			name = Debug;
 		};
@@ -565,7 +567,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenWebUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OpenWebUI";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketLlama.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PocketLlama";
 			};
 			name = Release;
 		};
@@ -604,7 +606,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7599483E2D0D0B280030260B /* Build configuration list for PBXProject "OpenWebUI" */ = {
+		7599483E2D0D0B280030260B /* Build configuration list for PBXProject "PocketLlama" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				759948652D0D0B290030260B /* Debug */,
@@ -613,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		759948672D0D0B290030260B /* Build configuration list for PBXNativeTarget "OpenWebUI" */ = {
+		759948672D0D0B290030260B /* Build configuration list for PBXNativeTarget "PocketLlama" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				759948682D0D0B290030260B /* Debug */,
@@ -622,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7599486A2D0D0B290030260B /* Build configuration list for PBXNativeTarget "OpenWebUITests" */ = {
+		7599486A2D0D0B290030260B /* Build configuration list for PBXNativeTarget "PocketLlamaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7599486B2D0D0B290030260B /* Debug */,
@@ -631,7 +633,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7599486D2D0D0B290030260B /* Build configuration list for PBXNativeTarget "OpenWebUIUITests" */ = {
+		7599486D2D0D0B290030260B /* Build configuration list for PBXNativeTarget "PocketLlamaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7599486E2D0D0B290030260B /* Debug */,

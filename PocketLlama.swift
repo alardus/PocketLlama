@@ -1,6 +1,6 @@
 //
-//  OpenWebUIApp.swift
-//  OpenWebUI
+//  PocketLlama.swift
+//  PocketLlama
 //
 //  Created by Alexander Bykov on 14.12.24.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct OpenWebUIApp: App {
+struct PocketLlama: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

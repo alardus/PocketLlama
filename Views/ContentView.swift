@@ -149,13 +149,13 @@ struct AboutView: View {
             .navigationBarTitleDisplayMode(.inline)
             
             VStack(spacing: 20) {
-                Text("Современное приложение для удобной работы с серверами Ollama на мобильных устройствах")
+                Text("Приложение для удобной работы с серверами Ollama на мобильных устройствах")
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
                 
                 Spacer()
                 
-                Link("Проект на GitHub", destination: URL(string: "https://github.com/alardus/openui-swift")!)
+                Link("Проект на GitHub", destination: URL(string: "https://github.com/alardus/PocketLlama")!)
                     .foregroundColor(.blue)
                 
                 Spacer()

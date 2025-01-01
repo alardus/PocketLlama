@@ -129,7 +129,7 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showingAbout) {
             AboutView()
-                .presentationDetents([.medium])
+                .presentationDetents([.height(UIDevice.current.userInterfaceIdiom == .pad ? 600 : 400)])
         }
         .onAppear(perform: loadSavedAddresses)
         .onReceive(NotificationCenter.default.publisher(for: Notification.Name("DefaultAddressChanged"))) { notification in
@@ -161,52 +161,60 @@ struct ContentView: View {
 
 // Отдельное view для окна About
 struct AboutView: View {
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    
     var body: some View {
         NavigationStack {
-            VStack() {
-                Image("AppIconAbout")
-                    .resizable()
-                    .frame(width: 60, height: 60)
+            VStack(spacing: 0) {
+                VStack(spacing: 15) {
+                    Spacer()
+                        .frame(height: horizontalSizeClass == .regular ? 80 : 40)
+                    
+                    Image("AppIconAbout")
+                        .resizable()
+                        .frame(width: horizontalSizeClass == .regular ? 100 : 60, 
+                               height: horizontalSizeClass == .regular ? 100 : 60)
+                    
+                    Text("PocketLlama")
+                        .font(horizontalSizeClass == .regular ? .largeTitle : .title)
+                        .bold()
+                    
+                    Text("Версия \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0.0")")
+                        .foregroundColor(.secondary)
+                        .font(horizontalSizeClass == .regular ? .title3 : .subheadline)
+                }
                 
-                Text("PocketLlama")
-                    .font(.title)
-                    .bold()
-                
-                Text("Версия \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0.0")")
-                    .foregroundColor(.secondary)
-                    .font(.subheadline)
-        
                 Spacer()
-            }
-            .padding(.top, 40)
-            .navigationTitle("О приложении")
-            .navigationBarTitleDisplayMode(.inline)
-            
-            VStack(spacing: 20) {
+                    .frame(minHeight: horizontalSizeClass == .regular ? 100 : 40)
+                
                 Text("Приложение для удобной работы с серверами Ollama на мобильных устройствах")
                     .multilineTextAlignment(.center)
+                    .font(horizontalSizeClass == .regular ? .title3 : .body)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal)
                 
                 Spacer()
+                    .frame(minHeight: horizontalSizeClass == .regular ? 80 : 30)
                 
-
                 Link("Проект на GitHub", destination: URL(string: "https://github.com/alardus/PocketLlama")!)
+                    .font(horizontalSizeClass == .regular ? .title3 : .body)
                     .foregroundColor(.blue)
                 
                 Spacer()
-
-
+                    .frame(minHeight: horizontalSizeClass == .regular ? 100 : 40)
+                
                 Text("Alexander Bykov \n Made with ❤ 2024-2025")
                     .foregroundColor(.gray)
+                    .font(horizontalSizeClass == .regular ? .title3 : .body)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal)
                 
-                
                 Spacer()
-                
+                    .frame(minHeight: horizontalSizeClass == .regular ? 80 : 30)
             }
+            .navigationTitle("О приложении")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

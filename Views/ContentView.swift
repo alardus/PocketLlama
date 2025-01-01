@@ -138,7 +138,7 @@ struct AboutView: View {
                     .font(.title)
                     .bold()
                 
-                Text("Версия 0.0.1")
+                Text("Версия \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0.0")")
                     .foregroundColor(.secondary)
                     .font(.subheadline)
         
@@ -151,12 +151,24 @@ struct AboutView: View {
             VStack(spacing: 20) {
                 Text("Приложение для удобной работы с серверами Ollama на мобильных устройствах")
                     .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal)
                 
                 Spacer()
                 
+
                 Link("Проект на GitHub", destination: URL(string: "https://github.com/alardus/PocketLlama")!)
                     .foregroundColor(.blue)
+                
+                Spacer()
+
+
+                Text("Alexander Bykov \n Made with ❤ 2024")
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal)
+                
                 
                 Spacer()
                 

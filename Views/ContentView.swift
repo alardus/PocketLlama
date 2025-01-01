@@ -197,7 +197,7 @@ struct AboutView: View {
                 Spacer()
 
 
-                Text("Alexander Bykov \n Made with ❤ 2024")
+                Text("Alexander Bykov \n Made with ❤ 2024-2025")
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)

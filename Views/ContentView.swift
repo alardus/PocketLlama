@@ -1,7 +1,25 @@
 import SwiftUI
 import WebKit
 
+struct Server {
+    let name: String
+    let url: String
+}
+
+class ContentViewModel: ObservableObject {
+    @Published var selectedServer: Server?
+    
+    func updateSelectedServer(_ address: ServiceAddress?) {
+        if let address = address {
+            selectedServer = Server(name: address.name, url: address.url)
+        } else {
+            selectedServer = nil
+        }
+    }
+}
+
 struct ContentView: View {
+    @StateObject private var viewModel = ContentViewModel()
     @State private var addresses: [ServiceAddress] = []
     @State private var showingAddSheet = false
     @State private var selectedAddress: ServiceAddress?
@@ -35,9 +53,21 @@ struct ContentView: View {
                     .offset(y: 50) // Смещение вниз на 50 точек
                 }
             }
-            .navigationTitle("PocketLlama")
+            .navigationTitle(viewModel.selectedServer?.name ?? "PocketLlama")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack {
+                        Text(viewModel.selectedServer?.name ?? "PocketLlama")
+                            .font(.headline)
+                        if let server = viewModel.selectedServer {
+                            Text(server.url)
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
+                    }
+                }
+                
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: { showingAbout = true }) {
                         Image(systemName: "info.circle")
@@ -50,7 +80,7 @@ struct ContentView: View {
                     Button(action: {
                         showingSideMenu = true
                     }) {
-                        Image(systemName: "list.bullet")
+                        Image(systemName: "server.rack")
                     }
                 }
             }
@@ -110,6 +140,9 @@ struct ContentView: View {
         .sheet(isPresented: $showingAddSheet) {
             AddAddressView(addresses: $addresses)
         }
+        .onChange(of: selectedAddress) { newAddress in
+            viewModel.updateSelectedServer(newAddress)
+        }
     }
     
     private func loadSavedAddresses() {
@@ -121,6 +154,7 @@ struct ContentView: View {
             self.addresses = loadedAddresses
             let defaultAddress = loadedAddresses.first(where: { $0.isDefault })
             self.selectedAddress = defaultAddress
+            viewModel.updateSelectedServer(defaultAddress)
         }
     }
 }
@@ -174,5 +208,11 @@ struct AboutView: View {
                 
             }
         }
+    }
+}
+
+extension ServiceAddress: Equatable {
+    static func == (lhs: ServiceAddress, rhs: ServiceAddress) -> Bool {
+        return lhs.id == rhs.id
     }
 }
